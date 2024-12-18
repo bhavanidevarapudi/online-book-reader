@@ -1,6 +1,4 @@
 import java.util.HashMap;
-
-// Represents the core system
 class DigitalLibrarySystem {
     private Catalog catalog;
     private MemberManager memberManager;
@@ -44,8 +42,6 @@ class DigitalLibrarySystem {
         screen.showMember(member);
     }
 }
-
-// Represents the catalog for managing books
 class Catalog {
     private HashMap<Integer, Book> bookCollection;
 
@@ -86,8 +82,6 @@ class Catalog {
         return bookCollection.get(id);
     }
 }
-
-// Manages members of the library system
 class MemberManager {
     private HashMap<Integer, Member> memberDatabase;
 
@@ -128,8 +122,6 @@ class MemberManager {
         return memberDatabase.get(id);
     }
 }
-
-// Displays the current book, user, and navigation details
 class Screen {
     private Book currentBook;
     private Member currentMember;
@@ -180,8 +172,6 @@ class Screen {
         System.out.println("Page " + currentPage + " updated on the screen.");
     }
 }
-
-// Represents a simple book entity
 class Book {
     private int id;
     private String description;
@@ -205,8 +195,6 @@ class Book {
         return title;
     }
 }
-
-// Represents a library member
 class Member {
     private int id;
     private String name;
@@ -230,8 +218,6 @@ class Member {
         return name;
     }
 }
-
-// Application entry point
 public class TestApplication {
     public static void main(String[] args) {
         DigitalLibrarySystem librarySystem = new DigitalLibrarySystem();
